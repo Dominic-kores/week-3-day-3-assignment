@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Currency Converter</title>
+
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- defer waits until HTML has loaded -->
+    <script src="currency.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Currency Converter</h1>
+
+        <p class="subtitle">
+            Convert currencies using live exchange rates.
+        </p>
+
+        <form id="currency-form">
+
+            <!-- Amount -->
+            <label for="amount">Amount</label>
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Enter amount"
+                min="0"
+                step="0.01"
+                required
+            >
+
+            <!-- Currency dropdowns -->
+            <div class="currency-row">
+
+                <div>
+                    <label for="from-currency">
+                        From Currency
+                    </label>
+
+                    <select id="from-currency">
+
+                        <option value="KES">KES - Kenyan Shilling</option>
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - British Pound</option>
+                        <option value="TZS">TZS - Tanzanian Shilling</option>
+                        <option value="UGX">UGX - Ugandan Shilling</option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="to-currency">
+                        To Currency
+                    </label>
+
+                    <select id="to-currency">
+
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="KES">KES - Kenyan Shilling</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - British Pound</option>
+                        <option value="TZS">TZS - Tanzanian Shilling</option>
+                        <option value="UGX">UGX - Ugandan Shilling</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="button-row">
+
+                <button type="submit">
+                    Convert
+                </button>
+
+                <button
+                    type="button"
+                    id="swap-btn"
+                    class="secondary-btn"
+                >
+                    Swap
+                </button>
+
+            </div>
+
+        </form>
+
+        <!-- Loading/error messages -->
+        <p id="currency-status" class="status"></p>
+
+        <!-- Conversion result -->
+        <div id="currency-result" class="result-box"></div>
+
+    </main>
+
+</body>
+</html>

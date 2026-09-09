@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>News Headline Aggregator</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="news.js" defer></script>
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>News Headline Aggregator</h1>
+
+        <p class="subtitle">
+            Browse news headlines by category.
+        </p>
+
+        <!-- Category filter -->
+        <div class="filter-section">
+
+            <label for="category">
+                News Category
+            </label>
+
+            <select id="category">
+
+                <option value="technology">
+                    Technology
+                </option>
+
+                <option value="business">
+                    Business
+                </option>
+
+                <option value="sports">
+                    Sports
+                </option>
+
+                <option value="health">
+                    Health
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- Loading/error messages -->
+        <p id="news-status" class="status"></p>
+
+        <!-- News articles -->
+        <section id="news-container" class="news-list"></section>
+
+    </main>
+
+</body>
+</html>
