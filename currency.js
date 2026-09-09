@@ -131,6 +131,7 @@ swapBtn.addEventListener(
     "click",
     () => {
 
+        
         // Save the current From currency
         const temporaryCurrency =
             fromCurrency.value;

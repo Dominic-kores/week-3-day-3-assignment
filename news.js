@@ -321,6 +321,7 @@ const loadNews = async (category) => {
 };
 
 
+
 // ------------------------------
 // Category filter
 // ------------------------------
